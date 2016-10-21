@@ -1,0 +1,63 @@
+body {
+  /*background: #c1d72e;*/
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /*color: #fff;*/
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+li{
+  list-style: none;
+}
+
+#categoryNames{
+  padding: 5px;
+  color:red;
+}
+
+
+.category li{
+display: inline;
+cursor: pointer;
+margin: 10px;
+padding: 5px;
+background-color: #ccc;
+color: #fff;
+border: solid #eee 2px;
+-moz-border-radius: 5px;
+ -webkit-border-radius: 5px;
+ border-radius: 5px;
+ -khtml-border-radius: 5px;
+
+}
+
+.category li:hover{
+  background-color: #cde;
+}
+#alphabet {
+  margin: 15px auto;
+  padding: 0;
+  max-width: 600px;
+}
+#alphabet:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#alphabet li {
+  float: left;
+  margin: 0 10px 10px 0;
+  list-style: none;
+  width: 35px;
+  height: 30px;
+  background: #fff;
+  cursor: pointer;
+  border: solid 1px #fff;
+}
+
+#alphabet li:hover {
+  background: #ccc;
+  border: solid 1px #fff;
+  color: #fff;
+}

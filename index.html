@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Hangman Game</title>
+  </head>
+  <body>
+    <div class="container wrapper col-md-12">
+          <div class="">
+            <h1>Hangman</h1>
+            <p class="">Choose your favorite category!!<br> Do not judge if category seems geeky and nerdy. <br>Use the alphabet below to guess the word, or click hint to get a clue.</p>
+            <ul class="category" id="category">
+              <li id="m" onclick="movies()">Movies</li>
+              <li id="d" onclick="dogs()">Dogs</li>
+              <li id="s" onclick="superHeros()">Super Heroes</li>
+              <li id="v" onclick="videoGames()">Video Games</li>
+              <!-- <li onclick="">Harry Potter</li> -->
+              <!-- <li conclick=""></li> -->
+            </ul>
+            <p id="categoryNames"></p>
+          </div>
+          <div class="wrapper">
+            <div id="hold"></div>
+            <div id="buttons">
+            </div>
+            <p id="mylives"></p>
+            <!-- <p id="clue">Clue -</p> -->
+            <!-- img or canvase for drawing -->
+          <div class="container">
+            <!-- <button id="hint" type="button" name="button">Hint</button> -->
+            <button id ="reset" type="button" name="button">Play again</button>
+          </div>
+
+          </div>
+    </div>
+    <script type="text/javascript" src ="assets/javascript/game.js">
+
+    </script>
+  </body>
+</html>
