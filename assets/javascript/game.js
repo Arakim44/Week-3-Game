@@ -44,6 +44,7 @@ function movies(){
   console.log(word.length);
   word = word.replace(/\s/g, "-");
   result();
+  console.log(word);
  }
 
 
@@ -109,6 +110,31 @@ function result(){
   correct.appendChild(guess);
   }
 }
+
+
+function check(){
+   list.onclick = function( ) {
+    var guess = (this.innerHTML);
+    this.setAttribute("class","active");
+    this.onclick = null;
+    for (var i =0; i<word.length; i++){
+      if (word[i]===guess){
+        guesses[i].innerHTML = guess;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
