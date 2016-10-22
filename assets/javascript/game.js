@@ -28,9 +28,9 @@ var lives;
     var list = document.createElement('li');
     list.id ='letter';
     list.innerHTML = alphabet[i];
-    // check();
     myButtons.appendChild(letters);
     letters.appendChild(list);
+    check();
   }
 
 
