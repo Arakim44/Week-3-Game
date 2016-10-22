@@ -28,7 +28,7 @@ var lives;
     var list = document.createElement('li');
     list.id ='letter';
     list.innerHTML = alphabet[i];
-    check();
+    // check();
     myButtons.appendChild(letters);
     letters.appendChild(list);
   }
@@ -114,27 +114,27 @@ function result(){
 
 
 //when clicking the letters, this happens:
-function check() {
-    function list.onclick() {
-     var geuss = (this.innerHTML);
-     this.setAttribute("class", "active");
-     this.onclick = null;
-     for (var i = 0; i < word.length; i++) {
-       if (word[i] === geuss) {
-         geusses[i].innerHTML = geuss;
-         counter += 1;
-       }
-     }
+// function check() {
+//     function list.onclick() {
+//      var geuss = (this.innerHTML);
+//      this.setAttribute("class", "active");
+//      this.onclick = null;
+//      for (var i = 0; i < word.length; i++) {
+//        if (word[i] === geuss) {
+//          geusses[i].innerHTML = geuss;
+//          counter += 1;
+//        }
+//      }
     //  var j = (word.indexOf(geuss));
     //  if (j === -1) {
       //  lives -= 1;
       //  comments();
       //  animate();
-     } else {
+    //  } else {
       //  comments();
-     }
- }
- }
+    //  }
+ // }
+ // }
 
 ///show lives
 //  comments = function () {
