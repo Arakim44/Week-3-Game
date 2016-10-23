@@ -20,6 +20,8 @@ var lives =7;
 
 //creating alphabet ul
 
+
+
   var myButtons = document.getElementById('buttons');
   var letters = document.createElement('ul');
 
@@ -138,7 +140,8 @@ function click(){
       }
     }
     if(youWin == true){
-      alert("win");
+      $('#win').html("<b>You Won!!</b>");
+
     }
   }
 }
