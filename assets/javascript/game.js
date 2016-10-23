@@ -15,7 +15,7 @@ var rand;
 var wordHolder;
 var correct;
 var guesses = [];
-var lives =10;
+var lives =7;
 
 
 //creating alphabet ul
@@ -42,7 +42,6 @@ function movies(){
   document.getElementById('category').style.display="none";
   console.log(word);
   console.log(word.length);
-  word = word.replace(/\s/g, "-");
   result();
   console.log(word);
   $("#mylives").html("<b>You have "+lives+" lives left<b>");
@@ -56,7 +55,6 @@ function dogs(){
    document.getElementById('categoryNames').innerHTML ="You picked Dogs";
    document.getElementById('category').style.display="none";
    console.log(word);
-   word = word.replace(/\s/g, "-");
    result();
    $("#mylives").html("<b>You have "+lives+" lives left<b>");
   }
@@ -67,7 +65,6 @@ function superHeros(){
    document.getElementById('categoryNames').innerHTML ="You picked Super Heros";
    document.getElementById('category').style.display="none";
    console.log(word);
-   word = word.replace(/\s/g, "-");
    result();
    $("#mylives").html("<b>You have "+lives+" lives left<b>");
 }
@@ -78,7 +75,6 @@ function videoGames(){
   document.getElementById('categoryNames').innerHTML ="You picked Video Games";
   document.getElementById('category').style.display="none";
   console.log(word);
-  word = word.replace(/\s/g, "-");
   result();
   $("#mylives").html("<b>You have "+lives+" lives left<b>");
 }
@@ -90,7 +86,6 @@ function harryPotters(){
   document.getElementById('categoryNames').innerHTML ="You picked Harry Potter!!";
   document.getElementById('category').style.display="none";
   console.log(word);
-  word = word.replace(/\s/g, "-");
   result();
   $("#mylives").html("<b>You have "+lives+" lives left<b>");
 }
@@ -103,9 +98,8 @@ function result(){
     correct.setAttribute('id','chosen-word');
     var guess = document.createElement('li');
     guess.setAttribute('class','guess');
-    if (word[i]==="-"){
+    if (word[i]===" "){
     guess.innerHTML = " ";
-    // space = 1;?
      }else{
     guess.innerHTML = "_";
   }
@@ -139,85 +133,3 @@ function click(){
 
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//when clicking the letters, this happens:
-// function check() {
-//     function list.onclick() {
-//      var geuss = (this.innerHTML);
-//      this.setAttribute("class", "active");
-//      this.onclick = null;
-//      for (var i = 0; i < word.length; i++) {
-//        if (word[i] === geuss) {
-//          geusses[i].innerHTML = geuss;
-//          counter += 1;
-//        }
-//      }
-    //  var j = (word.indexOf(geuss));
-    //  if (j === -1) {
-      //  lives -= 1;
-      //  comments();
-      //  animate();
-    //  } else {
-      //  comments();
-    //  }
- // }
- // }
-
-///show lives
-//  comments = function () {
-//   showLives.innerHTML = "You have " + lives + " lives";
-//   if (lives < 1) {
-//     showLives.innerHTML = "Game Over";
-//   }
-//   for (var i = 0; i < geusses.length; i++) {
-//     if (counter + space === geusses.length) {
-//       showLives.innerHTML = "You Win!";
-//     }
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-// Create geusses ul But I think I am gonna have to make these separet function and
-// have play button so it runs separately.
-// This is way too harder than I thought.
-   //
-  //  var wordHolder = document.getElementById('hold');
-  //  var correct = document.createElement('ul');
-  //
-  //  for (var i = 0; i < word.length; i++) {
-  //    correct.setAttribute('id', 'my-word');
-  //    var  guess = document.createElement('li');
-  //    guess.setAttribute('class', 'guess');
-  //    if (word[i] === "-") {
-  //      guess.innerHTML = "-";
-  //      space = 1;
-  //    } else {
-  //      guess.innerHTML = "_";
-  //    }
-  //
-  //    geusses.push(guess);
-  //    wordHolder.appendChild(correct);
-  //    correct.appendChild(guess);
-  //  }
