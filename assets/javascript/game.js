@@ -129,7 +129,16 @@ function click(){
     }
     if(lives==0){
       $('#mylives').html("<b>You Died!!!</b> The answer was <i>"+word+"</i>");
+      // TODO: stop letters buttons
     }
-
+    var youWin = true;
+    for(var i=0; i < guesses.length; i++){
+      if(guesses[i].innerHTML == "_"){
+        youWin = false;
+      }
+    }
+    if(youWin == true){
+      alert("win");
+    }
   }
 }
