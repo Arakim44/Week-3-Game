@@ -19,6 +19,7 @@ var lives =7;
 var list;
 
 
+
 //creating alphabet ul
 
 
@@ -41,6 +42,8 @@ function buttons(){
 function movies(){
   buttons();
   $("#cat").hide();
+  // document.getElementById('but').style.display="Use the alphabet below to guess the word.";
+  // $("#but").show("<p>Use the alphabet below to guess the word.</p>  ")
   rand = Math.floor(Math.random()*words.movie.length);
   word = words.movie[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Movies";
@@ -138,7 +141,10 @@ function click(){
     }
     if(lives==0){
       $('#mylives').html("<b>You Died!!!</b> The answer was <i>"+word+"</i>");
-      // $('buttons').hide();
+      $('#buttons').hide();
+      $('#win').html("<b>Boo Hoo</b>")
+      $('#categoryNames').hide();
+
       // TODO: stop letters buttons
     }
     var youWin = true;
@@ -150,8 +156,17 @@ function click(){
     if(youWin == true){
       $('#win').html("<b>You Won!!</b>");
       $('#but').hide();
-      // $('#buttons').hide();
+      $('#categoryNames').hide();
 
     }
   }
 }
+
+//
+// document.getElementById('reset').onclick = function() {
+//    correct.parentNode.removeChild(correct);
+//    letters.parentNode.removeChild(letters);
+//   //  showClue.innerHTML = "";
+//    context.clearRect(0, 0, 400, 400);
+//   //  play();
+//  }
