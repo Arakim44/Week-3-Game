@@ -15,7 +15,7 @@ var rand;
 var wordHolder;
 var correct;
 var guesses = [];
-var lives =7;
+var lives =10;
 
 
 //creating alphabet ul
@@ -45,7 +45,7 @@ function movies(){
   word = word.replace(/\s/g, "-");
   result();
   console.log(word);
-  $("#mylives").html("<b>You have 7 lives left<b>");
+  $("#mylives").html("<b>You have "+lives+" lives left<b>");
  }
 
 
@@ -58,6 +58,7 @@ function dogs(){
    console.log(word);
    word = word.replace(/\s/g, "-");
    result();
+   $("#mylives").html("<b>You have "+lives+" lives left<b>");
   }
 
 function superHeros(){
@@ -68,7 +69,7 @@ function superHeros(){
    console.log(word);
    word = word.replace(/\s/g, "-");
    result();
-
+   $("#mylives").html("<b>You have "+lives+" lives left<b>");
 }
 
 function videoGames(){
@@ -79,6 +80,7 @@ function videoGames(){
   console.log(word);
   word = word.replace(/\s/g, "-");
   result();
+  $("#mylives").html("<b>You have "+lives+" lives left<b>");
 }
 
 
@@ -90,6 +92,7 @@ function harryPotters(){
   console.log(word);
   word = word.replace(/\s/g, "-");
   result();
+  $("#mylives").html("<b>You have "+lives+" lives left<b>");
 }
 
 ///////////////////////
@@ -130,6 +133,10 @@ function click(){
       console.log(lives)
       $('#mylives').html("you have "+lives+" lives left!");
     }
+    if(lives==0){
+      $('#mylives').html("<b>You Died!!!</b> The answer was <i>"+word+"</i>");
+    }
+
   }
 }
 
