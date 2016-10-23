@@ -30,7 +30,7 @@ var lives;
     list.innerHTML = alphabet[i];
     myButtons.appendChild(letters);
     letters.appendChild(list);
-    check();
+    click();
   }
 
 
@@ -91,7 +91,7 @@ function harryPotters(){
   result();
 }
 
-/////write in jQuery***********
+///////////////////////
 function result(){
   wordHolder = document.getElementById('hold');
   correct = document.createElement('ul');
@@ -101,7 +101,7 @@ function result(){
     guess.setAttribute('class','guess');
     if (word[i]==="-"){
     guess.innerHTML = " ";
-    space = 1;
+    // space = 1;?
      }else{
     guess.innerHTML = "_";
   }
@@ -112,14 +112,14 @@ function result(){
 }
 
 
-function check(){
+function click(){
    list.onclick = function( ) {
     var guess = (this.innerHTML);
     this.setAttribute("class","active");
     this.onclick = null;
     for (var i =0; i<word.length; i++){
-      if (word[i]===guess){
-        guesses[i].innerHTML = guess;
+      if (word[i].toLowerCase()===guess){
+        guesses[i].innerHTML = word[i];
       }
     }
   }
