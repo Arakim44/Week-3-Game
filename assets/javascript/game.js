@@ -16,28 +16,31 @@ var wordHolder;
 var correct;
 var guesses = [];
 var lives =7;
+var list;
 
 
 //creating alphabet ul
 
 
-
+function buttons(){
   var myButtons = document.getElementById('buttons');
   var letters = document.createElement('ul');
 
   for(var i = 0; i < alphabet.length; i++){
     letters.id = 'alphabet';//The id property sets or returns the id of an element (the value of an element's id attriute). Syntax: HTMLElemntObject.id
-    var list = document.createElement('li');
+    list = document.createElement('li');
     list.id ='letter';
     list.innerHTML = alphabet[i];
     myButtons.appendChild(letters);
     letters.appendChild(list);
     click();
   }
-
+}
 
 //when categry is clicked, then it should show the randome word from the bank.
 function movies(){
+  buttons();
+  $("#cat").hide();
   rand = Math.floor(Math.random()*words.movie.length);
   word = words.movie[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Movies";
@@ -52,6 +55,7 @@ function movies(){
 
 
 function dogs(){
+   buttons();
    rand = Math.floor(Math.random()*words.dog.length);
    word = words.dog[rand];
    document.getElementById('categoryNames').innerHTML ="You picked Dogs";
@@ -62,6 +66,7 @@ function dogs(){
   }
 
 function superHeros(){
+   buttons();
    rand = Math.floor(Math.random()*words.superHero.length);
    word = words.superHero[rand];
    document.getElementById('categoryNames').innerHTML ="You picked Super Heros";
@@ -72,6 +77,7 @@ function superHeros(){
 }
 
 function videoGames(){
+  buttons();
   rand = Math.floor(Math.random()*words.videoGame.length);
   word = words.videoGame[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Video Games";
@@ -83,6 +89,7 @@ function videoGames(){
 
 
 function harryPotters(){
+  buttons();
   rand = Math.floor(Math.random()*words.harryPotter.length);
   word = words.harryPotter[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Harry Potter!!";
@@ -115,7 +122,7 @@ function result(){
 function click(){
    list.onclick = function( ) {
     var guess = (this.innerHTML);
-    this.setAttribute("class","active");
+    this.setAttribute("id","active");
     this.onclick = null;
     var guessNotInWord = true;
     for (var i =0; i<word.length; i++){
@@ -131,6 +138,7 @@ function click(){
     }
     if(lives==0){
       $('#mylives').html("<b>You Died!!!</b> The answer was <i>"+word+"</i>");
+      // $('buttons').hide();
       // TODO: stop letters buttons
     }
     var youWin = true;
@@ -141,6 +149,8 @@ function click(){
     }
     if(youWin == true){
       $('#win').html("<b>You Won!!</b>");
+      $('#but').hide();
+      // $('#buttons').hide();
 
     }
   }

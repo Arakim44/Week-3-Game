@@ -66,8 +66,20 @@ border: solid #eee 2px;
   border: solid 1px #fff;
 }
 
-#alphabet li:hover {
+#letter:hover {
   background: #ccc;
   border: solid 1px #fff;
   color: #fff;
+}
+
+#active {
+  cursor: alias;
+  text-decoration: line-through;
+  color: red;
+}
+
+#active:hover{
+  cursor: default;
+  text-decoration: line-through;
+  color: red;
 }
