@@ -15,7 +15,7 @@ var rand;
 var wordHolder;
 var correct;
 var guesses = [];
-var lives;
+var lives =7;
 
 
 //creating alphabet ul
@@ -45,6 +45,7 @@ function movies(){
   word = word.replace(/\s/g, "-");
   result();
   console.log(word);
+  $("#mylives").html("<b>You have 7 lives left<b>");
  }
 
 
@@ -117,10 +118,17 @@ function click(){
     var guess = (this.innerHTML);
     this.setAttribute("class","active");
     this.onclick = null;
+    var guessNotInWord = true;
     for (var i =0; i<word.length; i++){
       if (word[i].toLowerCase()===guess){
         guesses[i].innerHTML = word[i];
+        guessNotInWord = false;
       }
+    }
+    if(guessNotInWord) {
+      lives = lives - 1;
+      console.log(lives)
+      $('#mylives').html("you have "+lives+" lives left!");
     }
   }
 }
