@@ -37,6 +37,7 @@ li{
 
 
 #endPage{
+  text-align: center;
   float: right;
   max-width: 60%;
   padding: 40px;
@@ -46,7 +47,7 @@ li{
 
 #endPage h1,h2{
   background:rgba(255,255,255, 0.5);
-  color: red;
+ 
 }
 
 #img{
