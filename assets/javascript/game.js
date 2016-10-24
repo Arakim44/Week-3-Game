@@ -162,6 +162,11 @@ function click(){
   }
 }
 
+$('#reset').on("click",function(){
+  location.reload();
+})
+
+
 //
 // document.getElementById('reset').onclick = function() {
 //    correct.parentNode.removeChild(correct);
