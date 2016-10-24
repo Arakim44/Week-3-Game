@@ -42,8 +42,8 @@ function buttons(){
 function movies(){
   buttons();
   $("#cat").hide();
-  // document.getElementById('but').style.display="Use the alphabet below to guess the word.";
-  // $("#but").show("<p>Use the alphabet below to guess the word.</p>  ")
+  // document.getElementById('use').innerHTML="Use the alphabet below to guess the word.";
+  $("#use").html("<p>Use the alphabet below to guess the word.</p>  ")
   rand = Math.floor(Math.random()*words.movie.length);
   word = words.movie[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Movies";
@@ -59,6 +59,7 @@ function movies(){
 
 function dogs(){
    buttons();
+   $("#cat").hide();
    rand = Math.floor(Math.random()*words.dog.length);
    word = words.dog[rand];
    document.getElementById('categoryNames').innerHTML ="You picked Dogs";
@@ -70,6 +71,7 @@ function dogs(){
 
 function superHeros(){
    buttons();
+   $("#cat").hide();
    rand = Math.floor(Math.random()*words.superHero.length);
    word = words.superHero[rand];
    document.getElementById('categoryNames').innerHTML ="You picked Super Heros";
@@ -81,6 +83,7 @@ function superHeros(){
 
 function videoGames(){
   buttons();
+  $("#cat").hide();
   rand = Math.floor(Math.random()*words.videoGame.length);
   word = words.videoGame[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Video Games";
@@ -93,6 +96,7 @@ function videoGames(){
 
 function harryPotters(){
   buttons();
+  $("#cat").hide();
   rand = Math.floor(Math.random()*words.harryPotter.length);
   word = words.harryPotter[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Harry Potter!!";
@@ -140,7 +144,7 @@ function click(){
       $('#mylives').html("you have "+lives+" lives left!");
     }
     if(lives==0){
-      $('#mylives').html("<b>You Died!!!</b> The answer was <i>"+word+"</i>");
+      $('#mylives').html("<b>You Died!!!</b><br> The answer was <i>"+word+"</i>");
       $('#buttons').hide();
       $('#win').html("<b>Boo Hoo</b>")
       $('#categoryNames').hide();

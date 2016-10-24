@@ -1,6 +1,7 @@
 body {
   /*background: #c1d72e;*/
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    font-family: 'Indie Flower', cursive;
   /*color: #fff;*/
   height: 100%;
   text-align: center;
@@ -8,6 +9,7 @@ body {
 }
 li{
   list-style: none;
+
 }
 
 #categoryNames{

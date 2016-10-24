@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cormorant+Garamond|Gloria+Hallelujah|Homemade+Apple|Indie+Flower|Orbitron|Raleway:100|Rock+Salt|Slabo+27px" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <title>Hangman Game</title>
@@ -10,10 +11,10 @@
   <body>
     <div class="container wrapper col-md-12">
           <div class="">
-            <h1>Hangman</h1>
+            <h1>Hangman</h1><br>
             <div id="win">
-            <p id="cat">Choose your favorite category!!<br> Do not judge if category seems geeky and nerdy.
-            <p id="but">Use the alphabet below to guess the word!</p>
+            <p id="cat">Choose your favorite category!!<br> Do not judge if category seems geeky and nerdy.<br><br>
+            <p id="use"></p><br>
            </div>
             <ul class="category" id="category">
               <li id="m" onclick="movies()">Movies</li>
@@ -23,8 +24,10 @@
               <li id="h" onclick="harryPotters()">Harry Potter</li>
               <!-- <li conclick=""></li> -->
             </ul>
+            <br><br>
             <p id="categoryNames"></p>
           </div>
+            <br>
           <div class="wrapper">
             <div id="hold"></div>
             <div id="buttons">
@@ -36,7 +39,7 @@
             <!-- <button id="hint" type="button" name="button">Hint</button> -->
             <button id ="reset" type="button" name="button">Play again</button>
             <p>
-            
+
             </p>
           </div>
 
