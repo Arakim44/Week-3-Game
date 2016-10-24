@@ -6,7 +6,7 @@ var words = {
       movie: ['Back to the Future','The Godfather','Taxidriver','Interstellar','How to Train Your dragon','The Deer Hunter','Mononoke Hime','When Harry Met Sally','The Lord of the Ring','Harry Potter','Star Wars',],
       dog:  ['Dachshund','Pembroke Welsh Corgi','German Shaperd','Golden Ritriver','Jindo','Shiba Inu  ','Samoyed','Siberian Husky','Alaskan Malamute'],
       superHero: ['Captain America','Thor','Iron Man','Super Man','Spider Man', 'Luke Cage'],
-      videoGame: ['Portal','Super Smash Brothers','Heros of Might and Magic','Ori and The Blind Forest','Five Nights at Freddys'],
+      videoGame: ['Inside','Limbo','Portal','Super Smash Brothers','Heros of Might and Magic','Ori and The Blind Forest','Five Nights at Freddys'],
       harryPotter: ['Animagus','Blood Traitor','Muggle','Occulmens','Parselmouth','Order of the Phoenix','Lord Voldmort','Hogwarts','Gringotts','Honeydukes','Felix Felicis','Polyjuice','Acid Pop','Butterbeer','Horcuxes','Pensive','Quidditch','Blast-Ended Skrewt','Hippogriff','Hungarian Horntail','Accio','Avada Kedavra','Crucio','Expecto Patronum','Sectumsemptra','Lumos'],
     };
 
@@ -40,9 +40,10 @@ function buttons(){
 
 //when categry is clicked, then it should show the randome word from the bank.
 function movies(){
+  $("#introPage").hide();
   buttons();
-  $("#cat").hide();
-  // document.getElementById('use').innerHTML="Use the alphabet below to guess the word.";
+  $("#gamePage").show();
+  document.getElementById('use').innerHTML="Use the alphabet below to guess the word.";
   $("#use").html("<p>Use the alphabet below to guess the word.</p>  ")
   rand = Math.floor(Math.random()*words.movie.length);
   word = words.movie[rand];
@@ -58,8 +59,10 @@ function movies(){
 
 
 function dogs(){
+   $("#introPage").hide();
    buttons();
    $("#cat").hide();
+   $("#use").html("<p>Use the alphabet below to guess the word.</p>")
    rand = Math.floor(Math.random()*words.dog.length);
    word = words.dog[rand];
    document.getElementById('categoryNames').innerHTML ="You picked Dogs";
@@ -70,8 +73,10 @@ function dogs(){
   }
 
 function superHeros(){
+   $("#introPage").hide();
    buttons();
    $("#cat").hide();
+   $("#use").html("<p>Use the alphabet below to guess the word.</p>")
    rand = Math.floor(Math.random()*words.superHero.length);
    word = words.superHero[rand];
    document.getElementById('categoryNames').innerHTML ="You picked Super Heros";
@@ -82,8 +87,10 @@ function superHeros(){
 }
 
 function videoGames(){
+  $("#introPage").hide();
   buttons();
   $("#cat").hide();
+  $("#use").html("<p>Use the alphabet below to guess the word.</p>")
   rand = Math.floor(Math.random()*words.videoGame.length);
   word = words.videoGame[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Video Games";
@@ -95,8 +102,10 @@ function videoGames(){
 
 
 function harryPotters(){
+  $("#introPage").hide();
   buttons();
   $("#cat").hide();
+  $("#use").html("<p>Use the alphabet below to guess the word.</p>")
   rand = Math.floor(Math.random()*words.harryPotter.length);
   word = words.harryPotter[rand];
   document.getElementById('categoryNames').innerHTML ="You picked Harry Potter!!";
@@ -125,7 +134,7 @@ function result(){
   }
 }
 
-
+///on Click function. playing function.
 function click(){
    list.onclick = function( ) {
     var guess = (this.innerHTML);
@@ -144,10 +153,7 @@ function click(){
       $('#mylives').html("you have "+lives+" lives left!");
     }
     if(lives==0){
-      $('#mylives').html("<b>You Died!!!</b><br> The answer was <i>"+word+"</i>");
-      $('#buttons').hide();
-      $('#win').html("<b>Boo Hoo</b>")
-      $('#categoryNames').hide();
+      die();
 
       // TODO: stop letters buttons
     }
@@ -158,9 +164,8 @@ function click(){
       }
     }
     if(youWin == true){
-      $('#win').html("<b>You Won!!</b>");
-      $('#but').hide();
-      $('#categoryNames').hide();
+      win();
+
 
     }
   }
@@ -170,12 +175,18 @@ $('#reset').on("click",function(){
   location.reload();
 })
 
+function die(){
+$('#endPage').show();
+$('#die').html("YOU DIED!!!");
+$('#reset').html("<button>Play Again</buttom>");
+$('#letter').prop("disabled",true);
 
-//
-// document.getElementById('reset').onclick = function() {
-//    correct.parentNode.removeChild(correct);
-//    letters.parentNode.removeChild(letters);
-//   //  showClue.innerHTML = "";
-//    context.clearRect(0, 0, 400, 400);
-//   //  play();
-//  }
+}
+
+
+function win(){
+  $('#endPage').show();
+  $('#win').html("You Win!!!")
+  $('#reset').html("<button>Play Again</buttom>")
+  $('#letter').prop("disabled",true);
+}

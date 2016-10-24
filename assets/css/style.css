@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  /*text-align: center;*/
+  margin: 0;
+}
 body {
   /*background: #c1d72e;*/
   /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
@@ -6,11 +11,70 @@ body {
   height: 100%;
   text-align: center;
   font-size: 18px;
+  background-image: url("../images/skulls.png");
 }
 li{
   list-style: none;
 
 }
+
+#introPage{
+  /*border: solid 1px;*/
+  /*clear: both;*/
+  display: inline-block;
+  float: right;
+  max-width: 60%;
+  background:rgba(255,255,255, 0.3)
+
+  /*background-color: #fff;*/
+}
+#gamePage{
+  max-width:60%;
+  float: right;
+  background:rgba(255,255,255, 0.3)
+  /*background-color: #fff;*/
+}
+#img{
+  width: 30%;
+  float:left;
+  display: inline-block;
+  margin: 40px
+  /*clear: both;*/
+}
+
+.contain{
+  margin-top: 60px;
+}
+#masthead {
+  background:rgba(255,255,255, 0.5);
+  margin: 0 0 0px;
+  /*z index specifies the stack order of an element. only works on positioned element*/
+  z-index: 99;
+  position: fixed;
+  color: #fff;
+  overflow: auto;
+  border-bottom: 2px solid #ccc;
+  width: 100%;
+
+}
+
+#logo {
+  width: 250px;
+  height:56px;
+  background:	green;
+  float: center;
+  padding: 9px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  line-height: 54px;
+  color: #fff;
+  font-weight: 700;
+  font-size:30px;
+  text-decoration: none;
+
+}
+
+
 
 #categoryNames{
   padding: 5px;

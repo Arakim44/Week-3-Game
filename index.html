@@ -8,43 +8,60 @@
     <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <title>Hangman Game</title>
   </head>
+
+
   <body>
-    <div class="container wrapper col-md-12">
-          <div class="">
-            <h1>Hangman</h1><br>
-            <div id="win">
-            <p id="cat">Choose your favorite category!!<br> Do not judge if category seems geeky and nerdy.<br><br>
-            <p id="use"></p><br>
-           </div>
-            <ul class="category" id="category">
-              <li id="m" onclick="movies()">Movies</li>
-              <li id="d" onclick="dogs()">Dogs</li>
-              <li id="s" onclick="superHeros()">Super Heroes</li>
-              <li id="v" onclick="videoGames()">Video Games</li>
-              <li id="h" onclick="harryPotters()">Harry Potter</li>
-              <!-- <li conclick=""></li> -->
-            </ul>
-            <br><br>
-            <p id="categoryNames"></p>
-          </div>
-            <br>
-          <div class="wrapper">
-            <div id="hold"></div>
-            <div id="buttons">
+    <header id="masthead" >
+      <div class="container col-m-9 col-s-11">
+        <a href="index.html" id="logo">Play Hangman Online!</a>
+        </div>
+      </div>
+    </header>
+
+<!-- First page before choosing the categories. -->
+<div class="container col-m-8">
+      <section class="col-m-5 contain">
+        <img  id='img' src="assets/images/hangman0.png" alt="" />
+      </section>
+      <section class="contain col-m-5" id="introPage">
+          <h1>Welcome to Ara's Hangman!</h1><br>
+          <p>Choose your favorite Category!!<br> Do not judge if category seems geeky and nerdy.</p><br>
+            <div class="category" id="category">
+                <button class="btn-success" id="m" onclick="movies()">Movies</button>
+                <button class="btn-success" id="d" onclick="dogs()">Dogs</button>
+                <button class="btn-success" id="s" onclick="superHeros()">Super Heroes</button>
+                <button class="btn-success" id="v" onclick="videoGames()">Video Games</button>
+                <button class="btn-success" id="h" onclick="harryPotters()">Harry Potter</button>
             </div>
-            <p id="mylives"></p>
-            <!-- <p id="clue">Clue -</p> -->
-            <!-- img or canvase for drawing -->
-          <div class="container">
-            <!-- <button id="hint" type="button" name="button">Hint</button> -->
-            <button id ="reset" type="button" name="button">Play again</button>
-            <p>
+       </section>
 
-            </p>
-          </div>
+<!-- Game Page -->
 
-          </div>
-    </div>
+     <div class="contain" id="gamePage">
+       <div class="" id="hangImg">
+       <img src="" alt="" />
+       </div>
+       <div class="" id="guessButton"></div>
+        <h1 id="categoryNames"></h1>
+        <p id="use"></p><br>
+        <div id="hold"></div>
+        <div id="buttons"></div>
+        <p id="mylives"></p>
+
+            <div class="contain" id="endPage">
+            <h1 id="win"></h1>
+            <h1 id="die"></h1>
+            <p id ="reset" type="button" name="button"></p>
+            </div>
+
+
+     </div>
+
+<!-- end Page -->
+
+
+
+</div>
     <script type="text/javascript" src ="assets/javascript/game.js"></script>
   </body>
 </html>
