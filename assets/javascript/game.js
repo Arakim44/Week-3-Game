@@ -154,6 +154,7 @@ function click(){
     }
     if(lives==0){
       die();
+      $('#answer').html("The Answer Was <i>"+word+"<i>.");
 
       // TODO: stop letters buttons
     }
@@ -177,6 +178,7 @@ $('#reset').on("click",function(){
 
 function die(){
 $('#endPage').show();
+$('#gamePage').hide();
 $('#die').html("YOU DIED!!!");
 $('#reset').html("<button>Play Again</buttom>");
 $('#letter').prop("disabled",true);
@@ -185,8 +187,9 @@ $('#letter').prop("disabled",true);
 
 
 function win(){
+  $('#gamePage').hide();
   $('#endPage').show();
-  $('#win').html("You Win!!!")
-  $('#reset').html("<button>Play Again</buttom>")
+  $('#win').html("You Win!!!");
+  $('#reset').html("<button>Play Again</buttom>");
   $('#letter').prop("disabled",true);
 }
