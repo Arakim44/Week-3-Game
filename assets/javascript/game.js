@@ -190,6 +190,7 @@ function win(){
   $('#gamePage').hide();
   $('#endPage').show();
   $('#win').html("You Win!!!");
-  $('#reset').html("<button>Play Again</buttom>");
+  $('#continue').html("Would you like to play again?")
+  $('#reset').html("<button>Yes!</buttom>");
   $('#letter').prop("disabled",true);
 }

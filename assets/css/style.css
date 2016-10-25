@@ -18,20 +18,25 @@ li{
 
 }
 
+#main{
+  max-width: 960px;
+}
+
 #introPage{
   /*border: solid 1px;*/
   /*clear: both;*/
   display: inline-block;
   float: right;
-  max-width: 60%;
-  background:rgba(255,255,255, 0.3)
-
+  max-width: 80%;
+  background:rgba(255,255,255, 0.3);
+  padding: 40px;
   /*background-color: #fff;*/
 }
 #gamePage{
   max-width:60%;
   float: right;
-  background:rgba(255,255,255, 0.3)
+  background:rgba(255,255,255, 0.3);
+  /*padding: 10px;*/
   /*background-color: #fff;*/
 }
 
@@ -39,7 +44,7 @@ li{
 #endPage{
   text-align: center;
   float: right;
-  max-width: 60%;
+  /*max-width: 60%;*/
   padding: 40px;
   margin: 10px;
 
@@ -47,14 +52,14 @@ li{
 
 #endPage h1,h2{
   background:rgba(255,255,255, 0.5);
- 
+
 }
 
 #img{
   width: 30%;
   float:left;
   display: inline-block;
-  margin: 40px
+  margin: 20px
   /*clear: both;*/
 }
 
@@ -165,4 +170,51 @@ border: solid #eee 2px;
   cursor: default;
   text-decoration: line-through;
   color: red;
+}
+
+
+@media only screen and (max-width:640px){
+  #logo{max-width:100%;}
+  #img{
+    width:30%;
+    float: none;
+  }
+  #gamePage{max-width:100%;}
+  #introPage{max-width:100%;}
+  #endPage{width:100%;}
+
+}
+
+
+@media only screen and (min-width: 640px) and (max-width: 768px) {
+     /*For tablets: */
+     #logo{max-width:100%;}
+     #img{
+       width:30%;
+       float: none;
+     }
+     #gamePage{max-width:100%;}
+     #introPage{
+       max-width:100%;
+       float: none;
+     }
+     #endPage{width:100%;}
+
+}
+
+
+@media only screen and (min-width: 768px)  and (max-width: 1007px) {
+     /*For desktop: */
+     #img{
+       width:40%;
+       float:none;}
+       #gamePage{max-width:100%;}
+       #introPage{
+         max-width:100%;
+         float: none;
+       }
+       #endPage{width:100%;}
+
+
+
 }
