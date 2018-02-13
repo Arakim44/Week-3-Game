@@ -5,7 +5,7 @@ Simple hangman game written with JavaScript.
 
 [Play Online](https://http://hangman-game-ara-kim.herokuapp.com/index.html "Hangman Game online")
 
-![hangmanpic1](https://user-images.githubusercontent.com/20548632/36170335-ae934140-10c4-11e8-82b9-30058b51b621.jpg)
+![hangman](https://user-images.githubusercontent.com/20548632/36170389-dde3318a-10c4-11e8-9488-84d9de0f58cb.gif)
 
 
  ### Tools Used
